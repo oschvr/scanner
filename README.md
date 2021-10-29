@@ -5,13 +5,34 @@ scanner is a tiny TCP scanner library written in Go
 ## Installation
 
 ```bash
-wget
+VERSION=0.0.1
+OS=darwin
+ARCH=amd64
+
+wget -qO- https://github.com/oschvr/scanner/releases/download/$VERSION/scanner-$VERSION-$OS-$ARCH.tar.gz | tar -xzvf - -C /usr/local/bin
+
+mv /usr/local/bin/scanner-$VERSION-$OS-$ARCH /usr/local/bin/scanner
 ```
 
 ## Usage
 
-```go
-./scanner
+```bash
+scanner "scanme.nmap.org"
+
+➜ scanner scanme.nmap.org
+
+  ___    ___    __ _   _ __    _ __     ___   _ __
+ / __|  / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
+ \__ \ | (__  | (_| | | | | | | | | | |  __/ | |
+ |___/  \___|  \__,_| |_| |_| |_| |_|  \___| |_|
+
+----------------
+Warning 🌕: Scanning... !
+Connection to scanme.nmap.org succesful on port 22
+Connection to scanme.nmap.org succesful on port 80
+Connection to scanme.nmap.org succesful on port 9929
+Connection to scanme.nmap.org succesful on port 31337
+Success ✅: Scan complete
 ```
 
 ## Contributing
