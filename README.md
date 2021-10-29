@@ -1,6 +1,6 @@
 # scanner
 
-scanner is a tiny TCP scanner library written in Go
+scanner is a tiny TCP scanner library written in Go. Similar to nmap
 
 ## Installation
 
@@ -17,9 +17,7 @@ mv /usr/local/bin/scanner-$VERSION-$OS-$ARCH /usr/local/bin/scanner
 ## Usage
 
 ```bash
-scanner "scanme.nmap.org"
-
-➜ scanner scanme.nmap.org
+➜ scanner "scanme.nmap.org"
 
   ___    ___    __ _   _ __    _ __     ___   _ __
  / __|  / __|  / _` | | '_ \  | '_ \   / _ \ | '__|
